@@ -2,7 +2,7 @@ package rentalcompany.domain;
 
 public class Sonata extends Car{
     private static final int DISTANCEPERLITER = 10;
-    Sonata (int distance){
+    public Sonata (int distance){
         super(distance);
     }
 
@@ -18,7 +18,7 @@ public class Sonata extends Car{
 
     @Override
     public String getName() {
-        return "Sonate";
+        return "Sonata";
     }
 
 

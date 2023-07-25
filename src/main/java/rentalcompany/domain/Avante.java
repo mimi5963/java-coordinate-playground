@@ -2,7 +2,7 @@ package rentalcompany.domain;
 
 public class Avante extends Car{
     private static final int DISTANCEPERLITER = 15;
-    Avante(int distance){
+    public Avante(int distance){
         super(distance);
     }
     @Override

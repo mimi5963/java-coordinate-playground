@@ -15,8 +15,8 @@ public class CarRentalCompany implements RentalCompany{
     public String generateReport() {
         String result ="";
         for(Car c:carList){
-            result +=c.getName() +" : "+c.getChargeQuantity()+"리터\n";
+            result +=c.getName() +" : "+(int)c.getChargeQuantity()+"리터\n";
         }
-        return null;
+        return result;
     }
 }
