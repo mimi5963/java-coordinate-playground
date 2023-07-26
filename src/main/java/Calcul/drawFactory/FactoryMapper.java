@@ -11,7 +11,9 @@ public class FactoryMapper {
     public FactoryMapper(){
         maps.put(1,new onePointFactory());
         maps.put(2,new LineFactory());
+        maps.put(3,new TriangleFactory());
         maps.put(4,new SquareFactory());
+
     }
     public DrawFactory getFactoryFromMap(int n){
         return maps.get(n);
