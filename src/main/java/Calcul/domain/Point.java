@@ -11,7 +11,7 @@ public class Point implements Drawable{
         this(Calutil.brasplit(s));
     }
     public Point(int[] temp){
-        if(Calutil.validint(temp))
+        if(!Calutil.validint(temp))
             throw new IllegalArgumentException("유효하지 않은 숫자");
         this.x = temp[0];
         this.y = temp[1];
@@ -19,12 +19,14 @@ public class Point implements Drawable{
 
     @Override
     public void action() {
-        System.out.println("x : "+x+"y : "+ y);
+        System.out.println("x : "+x+" y : "+ y);
     }
 
     public double getDistance(Point point) {
         double result;
-        result = Math.sqrt(Math.pow(x-point.x,2)-Math.pow(y- point.y,2));
+        double xDistance = Math.pow(x-point.x,2);
+        double yDistance = Math.pow(y- point.y,2);
+        result = Math.sqrt(xDistance+yDistance);
         return result;
     }
     @Override

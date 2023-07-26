@@ -31,4 +31,8 @@ public class Calutil {
 
         return true;
     }
+    public static int splitlength(String s){
+        String delimiter ="-";
+        return s.split(delimiter).length;
+    }
 }
