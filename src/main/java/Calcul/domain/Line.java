@@ -6,17 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Line implements Drawable{
-    private List<Point> points;
+    //private List<Point> points;
+    private Points points;
+    private static DrawbleStatus ds = DrawbleStatus.LINE;
     public Line(String s){
-        points = Calutil.getPoints(s);
+        points = new Points(Calutil.getPoints(s));
     }
     @Override
     public void action() {
-        System.out.println(getDistance());
+        System.out.println(getLineLength());
     }
 
-    private double getDistance() {
-        return points.get(0).getDistance(points.get(1));
+    private double getLineLength() {
+        return points.execute(ds);
     }
 
 }
